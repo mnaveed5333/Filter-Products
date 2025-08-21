@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="filterbar">
+    <div id="filters">
+    <button onclick="filterByPrice(100)">Show $100 Products</button>
+    <button onclick="filterByPrice(200)">Show $200 Products</button>
+    <button onclick="display()">Show All</button>
+</div></div>
+    <div id="inputcontainer">
+    <div id="input">
+        <input type="file" id="file">
+            <input type="text" id="name" placeholder="Enter Product Name">
+            <input type="number" id="price" placeholder="Enter Price">
+            <input type="text" id="description" placeholder="Enter description">
+            <input type="submit" onclick="inputvalue()" id="submit" >
+    </div>
+    </div>
+    <div class="Productlist">
+        
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
