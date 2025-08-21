@@ -35,17 +35,19 @@ function display() {
 function filterByPrice(amount){
     let prolist = document.querySelector('.Productlist');
     prolist.innerHTML = '';
-    for(let i=0;i<=products.length;i++){
-        if(products[i].price<=amount){
+    products.filter(product=>parseFloat(product.price)<=amount)
+    .forEach(product=>
+    {
         let pro = document.createElement('div');
         pro.className = 'Product';
         pro.innerHTML = `
-            <img src="${products[i].url}" alt="Product Image">
-            <h2>${products[i].name}</h2>
-            <h4>$${products[i].price}</h4>
-            <p>${products[i].desc}</p>
+            <img src="${product.url}" alt="Product Image">
+            <h2>${product.name}</h2>
+            <h4>$${product.price}</h4>
+            <p>${product.desc}</p>
         `;
         prolist.appendChild(pro);
 
     
-}}}
+})}
+
